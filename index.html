@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solana Memecoin - CryptoProject</title>
+    <style>
+        :root {
+            --primary: #6c42f5;
+            --secondary: #2a2a40;
+            --accent: #38b6ff;
+            --light: #f8f9fa;
+            --dark: #121212;
+            --success: #00cc88;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: var(--light);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, var(--accent), var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .tokenomics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .tokenomic-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        
+        .progress {
+            height: 100%;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            border-radius: 4px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 40px;
+            opacity: 0.7;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: var(--light);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
+        }
+        
+        .memecoin-image {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .memecoin-image img {
+            max-width: 300px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .memecoin-image img:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .features, .tokenomics {
+                grid-template-columns: 1fr;
+            }
+            
+            .memecoin-image img {
+                max-width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Solana Memecoin</div>
+            <p class="tagline">La próxima revolución en memecoins en Solana</p>
+            <a href="#" class="btn">Unirse a la Comunidad</a>
+        </header>
+        
+        <div class="memecoin-image">
+            <img src="https://placehold.co/600x400/6c42f5/ffffff?text=Mi+Memecoin" alt="Imagen de Solana Memecoin" id="memecoinImg">
+            <p>¡Nuestro memecoin revolucionario!</p>
+        </div>
+        
+        <div class="card">
+            <h2>Acerca de Nuestro Proyecto</h2>
+            <p>Estamos construyendo una criptomoneda de próxima generación en la blockchain de Solana con capacidades avanzadas de trading y gestión automatizada de liquidez. Nuestro token aprovecha tecnología de vanguardia para proporcionar una experiencia de trading perfecta.</p>
+            <p>Utilizando el bot Deploy On Vortex, garantizamos una distribución justa y un crecimiento orgánico del mercado mediante la gestión estratégica de wallets y sistemas de trading automatizados.</p>
+        </div>
+        
+        <h2>Características Principales</h2>
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <h3>Velocidad de Solana</h3>
+                <p>Transacciones ultrarrápidas con tarifas bajas aprovechando la blockchain de alto rendimiento de Solana.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔒</div>
+                <h3>Trading Seguro</h3>
+                <p>Protección avanzada con bot y mecanismos de trading seguros para proteger sus inversiones.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <h3>Liquidez Automatizada</h3>
+                <p>Gestión automatizada de pools de liquidez para condiciones de trading estables y volatilidad reducida.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Tokenomics</h2>
+            <div class="tokenomics">
+                <div class="tokenomic-item">
+                    <h4>Liquidez</h4>
+                    <p>60%</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="tokenomic-item">
+                    <h4>Equipo</h4>
+                    <p>15%</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 15%;"></div>
+                    </div>
+                </div>
+                <div class="tokenomic-item">
+                    <h4>Marketing</h4>
+                    <p>15%</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 15%;"></div>
+                    </div>
+                </div>
+                <div class="tokenomic-item">
+                    <h4>Comunidad</h4>
+                    <p>10%</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 10%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Roadmap</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>Q1 2024</h3>
+                    <p>Despliegue del token y provisión de liquidez inicial</p>
+                </div>
+                <div class="feature">
+                    <h3>Q2 2024</h3>
+                    <p>Listados en CEX y asociaciones con exchanges importantes</p>
+                </div>
+                <div class="feature">
+                    <h3>Q3 2024</h3>
+                    <p>Expansión del ecosistema y desarrollo de utilidades</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2024 Solana Memecoin. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#">Twitter</a>
+                <a href="#">Telegram</a>
+                <a href="#">Discord</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Código para cambiar la imagen al hacer clic (solo como ejemplo)
+        document.getElementById('memecoinImg').addEventListener('click', function() {
+            alert('¡Próximamente tendrás tu imagen personalizada aquí!');
+        });
+        
+        // Animaciones simples
+        document.addEventListener('DOMContentLoaded', function() {
+            const features = document.querySelectorAll('.feature');
+            features.forEach((feature, index) => {
+                feature.style.animationDelay = `${index * 0.2}s`;
+                feature.classList.add('fade-in');
+            });
+        });
+    </script>
+</body>
+</html>
